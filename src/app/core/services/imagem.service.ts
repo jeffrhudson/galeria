@@ -17,4 +17,8 @@ export class ImagemService {
   buscarImagens() : Observable<Page<Imagem>>{
     return this.httpClient.get<Page<Imagem>>(this.url+"/buscar");
   }
+
+  cadastrarImagem(body: Imagem) : Observable<Imagem>{
+    return this.httpClient.post<Imagem>(this.url, body);
+  }
 }

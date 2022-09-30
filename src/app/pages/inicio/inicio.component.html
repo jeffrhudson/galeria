@@ -1,10 +1,2 @@
-<div
-  *ngFor="let imagem of listaImagens"
-  class="card"
-  style="width: 18rem; display: inline-flex; margin: 10px"
->
-  <img class="card-img-top" [src]="imagem.base64" alt="Card image cap" />
-  <div class="card-body" class="text-center">
-    <h5 class="card-title">{{ imagem.nome }}</h5>
-  </div>
-</div>
+<a class = "text-center" href = "/inicio/cadastro"><h1>CADASTRO</h1></a>
+<app-card *ngFor="let imagem of listaImagens" [imagem]="imagem"></app-card>

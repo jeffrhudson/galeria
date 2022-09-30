@@ -1,0 +1,23 @@
+<h2 class = "text-center">Formuĺário de cadastro</h2>
+
+<form [formGroup]="imagemForm" style = "width: 50%; margin: 0 auto;" (submit)="salvar()">
+    <div class = "input-group mb-3">
+        <label class = "input-group-text" for="file-field">Imagem</label>
+        <input class="form-control" type="file" accept="image/png, image/jpeg" (change) = "fileUpload($event)" id = "file-field">
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" formControlName="nome" class="form-control" id="nome" placeholder="nome da imagem">
+        <label for="floatingInput">Nome da Imagem</label>
+    </div>
+    <div>
+        <label for="tipo-imagem" class="form-label">Tipo da Imagem:</label>
+        <select id = "tipo-imagem" formControlName="tipoImagem" class="form-select" aria-label="Tipo imagem">
+            <option value="PESSOA">Pessoa</option>
+            <option value="ANIMAL">Animal</option>
+            <option value="LUGAR">Lugar</option>
+            <option value="OUTROS">Outros</option>
+        </select>
+    </div>
+
+    <button class = "btn btn-primary mt-4">Enviar</button>
+</form>
